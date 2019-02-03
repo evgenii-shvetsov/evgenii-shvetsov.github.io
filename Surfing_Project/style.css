@@ -1,0 +1,708 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.more_btn a {
+    color: #333333;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+
+}
+
+.more_btn a:hover {
+    border-bottom: 2px solid #5da8ef;
+}
+
+h4 {
+    color: #333333;
+    font-family: "Playfair Display";
+    font-size: 2.55em;
+    font-weight: 700;
+    letter-spacing: 0.42px;
+}
+
+.paragraph_text {
+    max-width: 336px;
+    margin: 0 auto;
+    opacity: 0.65;
+    color: #616161;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.35px;
+}
+
+.vertical_paragr {
+    /*writing-mode: vertical-rl;
+    text-orientation: mixed;*/
+    opacity: 0.2;
+    color: #0b0c11;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+hr {
+    margin: 0 auto;
+    height: 100px;
+    width: 3px;
+    background-color: #5da8ef;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /*background: #f3f3f3;*/
+}
+
+.wrapper_container {
+    margin: 0 auto;
+    max-width: 90%;
+    box-sizing: border-box;
+    margin-top: 38px;
+    background-color: #ffffff;
+    overflow: hidden;
+
+}
+
+header {
+    min-height: 661px;
+    max-width: 1289px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo:hover {
+    opacity: 0.7;
+}
+
+header .navigation {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 190px;
+    margin-top: 22px;
+}
+
+header .navigation a {
+    opacity: 0.9;
+    color: #0b0c11;
+    font-size: 9px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5.58px;
+    margin-left: 30px;
+    border-bottom: 2px solid transparent;
+}
+
+header .navigation a:hover {
+    border-bottom: 2px solid #5da8ef;
+}
+
+/*************HEADER-CONTENT*************/
+.header-content {
+    margin-top: 45px;
+}
+
+.wrapper_header {
+    max-width: 1288px;
+    max-height: 572px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper_header article {
+    max-width: 1228px;
+    min-height: 572px;
+}
+
+.wrapper_header article {
+    width: 1228px;
+    background-image: url(img/header_main_pic.jpg);
+    background-repeat: no-repeat;
+    background-position: 14.7em;
+    background-size: cover;
+}
+
+.wrapper_header .head_your {
+    opacity: 0.9;
+    color: #5da8ef;
+    font-size: 0.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+    padding-top: 199px;
+}
+
+.wrapper_header h1 {
+    color: #0b0c11;
+    font-size: 3.875em;
+    font-weight: 400;
+}
+
+.header-content article p {
+    max-width: 389px;
+    color: #8f8f8f;
+    font-size: 0.875em;
+    font-weight: 300;
+    letter-spacing: 0.35px;
+}
+
+.header_third_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header_third_col .vertical_paragr {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.header_socials a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.header_socials img {
+    margin-top: 34px;
+}
+
+/***********MAIN > QUOTE**************/
+
+
+.quote {
+    margin: 0 auto;
+    max-width: 610px;
+    min-height: 512px;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 90px;
+}
+
+.wrapper_quote {}
+
+.quote h3 {
+    opacity: 0.9;
+    color: #333333;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0.26px;
+}
+
+.quote p {
+    opacity: 0.9;
+    color: #333333;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 66px;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+}
+
+.quote hr {
+    text-align: center;
+    margin-top: 58px;
+}
+
+
+
+
+/**********SECTION_STORIES*************/
+.stories {
+    max-width: 1228px;
+    min-height: 800px;
+    overflow: hidden;
+}
+
+.wrapper_stories {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.stories_picture {
+    max-width: 613px;
+    max-height: 592px;
+}
+
+.stories_picture img {
+    max-width: 100%;
+}
+
+.stories_video {
+    /*max-width: 613px;
+    max-height: 592px;*/
+    /*display: flex;*/
+    position: absolute;
+    top: 43px;
+    left: 518px;
+    /*box-shadow: -2px -2px 35px rgba(0, 0, 0, 0.19);*/
+}
+
+/**/
+.stories_video video {
+    max-width: 100%;
+}
+
+.stories_picture .paragraph_text {
+    margin-top: 59px;
+}
+
+.stories_picture .more_btn {
+    width: 99px;
+    margin-left: 138px;
+    margin-top: 20px;
+}
+
+
+/****************SHOP******************/
+.wrapper_shop {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1440px;
+    min-height: 880px;
+    background-image: url(img/Layers/img1.png);
+    background-size: contain;
+    margin-top: -50px;
+}
+
+.shop_range {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.product_details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 380px;
+    /*flex-basis: 15%;*/
+    max-height: 450px;
+    position: relative;
+    margin-left: 45px;
+    transition: all 0.2s;
+}
+
+.product_details_photo {
+    display: flex;
+    background-image: url(img/board-base.png);
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+}
+
+.product_details_photo:hover {
+    /*flex-basis: 29%;*/
+    background-image: none;
+    cursor: pointer;
+}
+
+.product_details_description {
+    position: absolute;
+    /*min-width: 183px;*/
+    top: 50%;
+    left: 50%;
+}
+
+.wrapper_shop article p {
+    color: #5da8ef;
+    font-size: 0.55em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+}
+
+
+
+.product_details_description .board_type {
+    color: #7a7a7a;
+    font-size: 0.75em;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    text-align: left;
+}
+
+.product_details_description h5 {
+    color: #333333;
+    font-size: 1.6em;
+    font-weight: 400;
+    letter-spacing: 0.26px;
+    text-align: left;
+}
+
+.product_details_description .board_price {
+    color: #ce60a8;
+    font-size: 1.25em;
+    font-weight: 300;
+    letter-spacing: -0.1px;
+    margin-top: 38px;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.product_details_description a {
+    color: #333333;
+    font-size: 0.55em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+    margin-right: 50px;
+}
+
+.wrapper_shop .more_btn {
+    margin: 0 auto;
+    width: 88px;
+    margin-top: 82px;
+}
+
+
+
+/***************SURF_TRAINING****************/
+
+.surf_training {
+    max-width: 1270px;
+    min-height: 560px;
+}
+
+.wrapper_surf_training {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.surf_train_1st_col {
+    max-width: 338px;
+    text-align: left;
+    margin-right: 54px;
+}
+
+.surf_train_1st_col .parag_numb {
+    width: 151px;
+    color: #f9f9f9;
+    font-size: 130px;
+    line-height: 66px;
+    font-weight: 700;
+    letter-spacing: 13px;
+}
+
+.surf_train_1st_col h4::first-letter {
+    border-bottom: 2px solid #5da8ef;
+}
+
+.surf_train_1st_col .paragraph_text {
+    margin-top: 34px;
+}
+
+.surf_train_1st_col .more_btn {
+    width: 99px;
+    margin-top: 67px;
+}
+
+.surf_train_2nd_col {
+    max-width: 762px;
+    max-height: 439px;
+}
+
+.surf_train_2nd_col img {
+    max-width: 100%;
+}
+
+.surf_train_3nd_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.surf_train_3nd_col .vertical_paragr {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    width: 10px;
+    margin-left: 19px;
+    /*transform: rotate(270deg);
+    padding-top: 70px;*/
+
+}
+
+/*********************Point Break***********/
+
+.point_break {
+    max-width: 1270px;
+    min-height: 560px;
+    padding-top: 30px;
+}
+
+.wrapper_point_break {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.point_break_1st_col {
+    max-width: 338px;
+    text-align: left;
+    margin-left: 77px;
+}
+
+.point_break_1st_col .parag_numb {
+    width: 151px;
+    color: #f9f9f9;
+    font-size: 130px;
+    line-height: 66px;
+    font-weight: 700;
+    letter-spacing: 13px;
+}
+
+.point_break_1st_col h4::first-letter {
+    border-bottom: 2px solid #5da8ef;
+}
+
+.point_break_1st_col .paragraph_text {
+    margin-top: 34px;
+}
+
+.point_break_1st_col .more_btn {
+    width: 99px;
+    margin-top: 67px;
+}
+
+.point_break_2nd_col {
+    max-width: 489px;
+    max-height: 439px;
+}
+
+.point_break_2nd_col img {
+    max-width: 100%;
+}
+
+.point_break_3nd_col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.point_break_3nd_col .vertical_paragr {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    width: 10px;
+    margin-right: 15px;
+    /*float: left;
+    transform: rotate(270deg);
+    transform-origin: left top 0;
+    padding-top: 70px;*/
+}
+
+/**********Join**********************/
+.wrapper_join {
+    min-height: 550px;
+    background-image: url(img/Layers/img2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.wrapper_join h4 {
+    text-align: center;
+    margin-top: 63px;
+}
+
+.wrapper_join .paragraph_text {
+    max-width: 557px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.forms {
+    text-align: center;
+    margin-top: 39px;
+
+}
+
+.form_pos {
+    min-width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.email_form {
+    min-width: 540px;
+    height: 50px;
+    background-color: #f5f5f5;
+
+}
+
+.email_btn {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: -1px;
+}
+
+.email_btn:hover {
+    opacity: 0.8;
+}
+
+.form_pos ::placeholder {
+    opacity: 0.9;
+    color: #333333;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+    padding-left: 29px;
+}
+
+/****************Join The Club*************/
+.wrapper_contact {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.contact_1st_col img {
+    max-width: 100%;
+}
+
+.contact_2nd_col {
+    margin-top: 105px;
+    margin-left: 44px;
+}
+
+.contact_2nd_col .contact_location {
+    margin-left: 48px;
+    margin-top: 60px;
+    color: #333333;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 46px;
+    letter-spacing: 0.32px;
+}
+
+.contact_2nd_col .more_btn {
+    width: 126px;
+    margin-top: 67px;
+}
+
+
+
+.contact_2nd_col .more_btn a {
+    color: #5da8ef;
+    letter-spacing: 3px;
+}
+
+
+/***********Footer**************/
+
+.wrapper_footer {
+    margin: 0 auto;
+    margin-top: 98px;
+    min-height: 343px;
+    text-align: center;
+}
+
+.wrapper_footer .logo {
+    margin-left: 30px;
+}
+
+footer .navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 39px;
+}
+
+footer .navigation a {
+    opacity: 0.9;
+    color: #0b0c11;
+    font-size: 9px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5.58px;
+    margin-left: 30px;
+    border-bottom: 2px solid transparent;
+}
+
+footer .navigation a:hover {
+    border-bottom: 2px solid #5da8ef;
+}
+
+.footer_socials {
+    margin-top: 40px;
+}
+
+.footer_socials a {
+    padding-left: 33px;
+}
+
+.footer_socials a:hover {
+    color: #0b0c11;
+}
+
+
+/********MEDIA SCREEN*************/
+
+@media screen and (max-width:1328px) {
+    .surf_train_3nd_col .vertical_paragr {
+        writing-mode: unset;
+        width: 85px;
+}
+
+@media screen and (max-width:1274px) {
+    .contact_2nd_col {
+        margin-top: 25px;
+    }
+
+    .wrapper_shop {
+        margin-top: 50px;
+    }
+
+    .stories_video {
+        position: initial;
+        top: 43px;
+        left: 518px;
+    }
+}
+
+@media screen and (max-width:677px) {
+    .email_form {
+        min-width: 287px;
+    }
+}
+
+@media screen and (max-width:587px) {
+    .point_break_3nd_col .vertical_paragr {
+        writing-mode: unset;
+        width: 85px;
+}
