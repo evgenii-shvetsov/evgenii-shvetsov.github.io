@@ -126,6 +126,7 @@ header .navigation a:hover {
 /*************HEADER-CONTENT*************/
 .header-content {
     margin-top: 45px;
+    overflow: hidden;
 }
 
 .wrapper_header {
@@ -133,6 +134,7 @@ header .navigation a:hover {
     max-height: 572px;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .wrapper_header article {
@@ -201,7 +203,6 @@ header .navigation a:hover {
     max-width: 610px;
     min-height: 512px;
     text-align: center;
-    margin-top: 50px;
     padding-top: 90px;
 }
 
@@ -695,9 +696,52 @@ footer .navigation a:hover {
     }
 }
 
+@media screen and (max-width:1100px) {
+
+    .wrapper_header article {
+        background-position: unset;
+        background-size: contain;
+    }
+    .header-content article p {
+        color: black;
+    }
+    .header_third_col {
+        justify-content: unset;
+    }
+    .wrapper_header .head_your {
+        padding-top: 100px;
+    }
+    .quote {
+        margin-top: -45px;
+    }
+}
+
+
 @media screen and (max-width:677px) {
     .email_form {
         min-width: 287px;
+    }
+    .quote {
+        margin-top: -250px;
+    }
+    .header_third_col .vertical_paragr {
+        writing-mode: unset;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .wrapper_header .head_your {
+        padding-top: 260px;
+    }
+
+    .wrapper_header h1 {
+        font-size: 1.88em;
+    }
+    
+    .header-content article p {
+        max-width: 389px;
+        font-size: 0.875em;
+        letter-spacing: 0.35px;
     }
 }
 
@@ -705,4 +749,6 @@ footer .navigation a:hover {
     .point_break_3nd_col .vertical_paragr {
         writing-mode: unset;
         width: 85px;
+    }
+    
 }
