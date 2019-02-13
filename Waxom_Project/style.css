@@ -49,6 +49,16 @@ button:hover {
     line-height: 28px;
 }
 
+.text_paragraph {
+    margin: 0 auto;
+    margin-top: 19px;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
 html,
 body {
     height: 100%;
@@ -93,11 +103,11 @@ nav .logo:hover {
     opacity: 0.8;
 }
 
-nav .logo a {
+nav .logo  {
     display: flex;
 }
 
-nav .logo p {
+nav .logo .logo_text {
     margin-top: 8px;
     color: #ffffff;
     font-family: Raleway;
@@ -135,10 +145,12 @@ nav .logo p {
     opacity: 0.8;
 }
 
+/**********HEADER CENTER*******************/
 
 .header_center {
-    max-width: 600px;
     margin: 0 auto;
+    max-width: 600px;
+    
     text-align: center;
     margin-top: 285px;
 }
@@ -157,15 +169,8 @@ nav .logo p {
     font-weight: 800;
 }
 
-.text_paragraph {
+.header_center .text_paragraph {
     max-width: 562px;
-    margin: 0 auto;
-    margin-top: 19px;
-    color: #ffffff;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px;
 }
 
 .header_center button {
@@ -197,13 +202,13 @@ nav .logo p {
     justify-content: center;
     flex-wrap: wrap;
     padding-top: 80px;
-
+    padding-bottom: 80px;
 }
 
 .services_details {
     width: 267px;
     text-align: center;
-    margin-left: 10px;
+    margin: 15px;
 }
 
 .services_details:hover a img {
@@ -322,6 +327,7 @@ nav .logo p {
     overflow: hidden;
 }
 
+
 .text_box_paragraphes .first_p {
     color: #ffffff;
     font-family: Raleway;
@@ -358,6 +364,7 @@ nav .logo p {
 
 .wrapper_latest_projects {
     padding-top: 81px;
+    padding-bottom: 41px;
 }
 
 .wrapper_latest_projects p {
@@ -564,7 +571,6 @@ nav .logo p {
     top: 15px;
     left: 15px;
     cursor: pointer;
-
 }
 
 
@@ -579,6 +585,7 @@ nav .logo p {
     justify-content: center;
     flex-wrap: wrap;
     padding-top: 79px;
+    
 }
 
 .mobile_dev_text {
@@ -696,7 +703,7 @@ nav .logo p {
     flex-direction: column;
     width: 370px;
     max-height: 395px;
-    margin-left: 30px;
+    margin: 15px;
     position: relative;
     border: 1px solid #f8f8f8;
 }
@@ -786,6 +793,7 @@ nav .logo p {
 
 .posts_arrows {
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .posts_arrows a {
@@ -837,10 +845,12 @@ nav .logo p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 80px;
 }
 
 .contact_position {
-    margin-left: 42px;
+    /*margin-left: 42px;*/
+    
 }
 
 .contact_paragr {
@@ -853,14 +863,14 @@ nav .logo p {
 }
 
 .contact_1st_column {
-    padding-top: 80px;
+    /*padding-left: 20px;*/
 }
 
-.contact_1st_column .logo a {
+.contact_1st_column .logo  {
     display: flex;
 }
 
-.contact_1st_column .logo p {
+.contact_1st_column .logo .logo_text {
     margin-top: 8px;
     color: #ffffff;
     font-family: Raleway;
@@ -889,7 +899,7 @@ nav .logo p {
 /*second column*/
 
 .contact_2nd_column {
-    padding-top: 108px;
+    padding: 20px;
 }
 
 .contact_position h6 {
@@ -927,7 +937,7 @@ nav .logo p {
 
 /**THIRD COLUMN*********/
 .contact_3rd_column {
-    padding-top: 107px;
+    padding: 20px;
 }
 
 .contact_3rd_column .column_date {
@@ -946,8 +956,8 @@ nav .logo p {
 }
 
 /******4 Column*******/
-.contact_4th_column h6 {
-    padding-top: 107px;
+.contact_4th_column {
+    padding: 20px;
 }
 
 .cont_pict {
@@ -1017,3 +1027,4 @@ footer {
 .wrapper_footer a .copy_faq:hover {
     color: #ffffff;
 }
+
