@@ -112,7 +112,7 @@ class GoodsList {
             this.render();
         })
          */
-            this.goods = json();
+            this.goods = data();
             this.render();
     }
     
