@@ -110,10 +110,8 @@ class GoodsList {
         makeGETRequest(`${API_URL}/catalog.json`, (goods) => {
             this.goods = JSON.parse(goods);
             this.render();
-        })
+        })?????????
          */
-            this.goods = data();
-            this.render();
     }
     
 
