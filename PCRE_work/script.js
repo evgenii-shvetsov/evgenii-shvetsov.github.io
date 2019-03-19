@@ -1,7 +1,7 @@
 // Загрузка информации в поля формы из файла JSON через AJAX
 document.getElementById('form__button-load').onclick = function () {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', './example.json', true);
+    xhr.open('GET', 'example.json', true);
     
 
     xhr.onreadystatechange = function () {
