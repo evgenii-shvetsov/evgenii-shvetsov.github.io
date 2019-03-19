@@ -18,3 +18,13 @@ document.getElementById('form__button-load').onclick = function () {
     xhr.send();
 };
 
+// Отслеживание события "submit" формы
+document.getElementById('form').onsubmit = function (e) {
+    e.preventDefault();
+    var formNew = new Form('formId', 'formClass', document.getElementById('form__input-name').value,
+        document.getElementById('form__input-phone').value,
+        document.getElementById('form__input-email').value,
+        document.getElementById('form__text').value);
+    formNew.validate('form__input', ['name', 'phone', 'email']);
+};
+
