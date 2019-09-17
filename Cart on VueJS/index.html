@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eShop(Vue.js)</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <search @search='filterGoods'></search>
+            <cart 
+            :goods-in-cart="goodsInCart" @cart-info-show="cartShow" ></cart>
+        </header>
+
+        <main>
+            <!--
+              <div class='cart-list' >
+                <div class="cart-item" 
+                v-for="prod in goodsInCart"
+                @click="$emit('removeFromCartList',prod)">
+                    <li>{{prod.product_name}} <span>{{prod.price}} $</span>
+                    <button @click="$emit('removeFromCart',prod)"><img src="img/delete.png" alt="del"></button></li>
+                </div>
+                <p>Общая стоимость покупок: {{ totalCartPrice }}$</p>
+            </div>  
+            -->
+            
+            <cart-list v-show='cartInfo' @remove-from-cart-list='removeFromCart'
+            :goods-in-cart="goodsInCart"></cart-list>
+ 
+
+            <div v-if='filteredGoods.length === 0'>Нет данных</div>
+            <goods-list @add-to-cart-list='addToCart' :goods="filteredGoods"></goods-list>
+
+        </main>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="scriptPromises.js"></script>
+</body>
+
+</html>
