@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    text-decoration: none;
+    /*list-style-type: none;*/
+}
+h2, h3, h4{
+    font-size: 20px;
+}
+
+/*************BODY***********************/
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: rgb(225, 222, 222);
+    color: black;
+}
+
+
+/*************HEADER***********************/
+header {
+    min-height: 130px;
+    display: flex;
+    background: rgb(232,217,20);
+    background: linear-gradient(212deg, rgb(218, 212, 217) 0%, rgba(242,242,235,1) 27%, rgba(242,241,237,1) 69%, rgba(210,210,210,1) 100%);
+}
+
+.header_text{
+    padding-right: 100px;
+}
+
+.ccsf_logo {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#ccsf_logo {
+    max-width: 95%;
+    height: 95%;
+    transition: all .2s ease-in-out;
+}
+
+#ccsf_logo:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+.header_text {
+    max-width: fit-content;
+    margin: auto;
+}
+
+/*************NAV***********************/
+
+.navigation {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.navigation li{
+    margin-left: 15px;
+}
+.myButton {
+    box-shadow: inset 0px 0px 14px 1px #ffffff;
+	background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color: #ededed;
+	border-radius: 6px;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	cursor: pointer;
+	color: #777777;
+	font-size: 15px;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #ffffff;
+}
+
+.myButton:hover {
+	background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color: #dfdfdf;
+}
+
+.myButton:active {
+	position: relative;
+	top: 1px;
+}
+
+/*************MAIN***********************/
+main{
+    height: 100%;
+    width: 90%;
+    margin: 20px auto;
+    
+}
+main .hide_extra{
+    display: none;
+}
+
+main #author_photo{
+    display: block;
+    max-width: 400px;
+    max-height: 300px;
+    
+    border-radius: 10%;
+}
+
+main .external_link{
+    margin-top: 10px;
+	color: #0b00df;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 25px;
+	letter-spacing: 0.7px;
+}
+
+main .external_link:hover{
+    color: #7872e9;
+}
+main p {
+    max-width: 750px;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+main p.coming_soon{
+    max-width: none;
+    margin-top: 35px ;
+    text-align: center;
+    font-size: 20px;
+}
+main .good_links {
+    list-style-type: none;
+    max-width: 750px;
+    text-align: justify;
+}
+main .good_links li{
+    margin-top: 10px;
+}
+
+.assignments_list{
+    min-height: 150px;
+    list-style-type: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+.assignments_list li{
+    margin-top: 25px;
+}
+.assignments_list li a{
+    border: 1px solid rgb(165, 160, 160);
+    border-radius: 5px;
+    padding: 5px;
+    background: rgb(229, 235, 242);
+}
+.assignments_list li a:hover{
+    background: rgb(214, 218, 223);
+}
+/*************FOOTER***********************/
+
+footer{
+    max-height: 130px;
+    width: 100%;
+    /*position: fixed;
+    bottom: 0;*/
+    text-align: center;
+    background: rgb(232,217,20);
+    background: linear-gradient(212deg, rgb(218, 212, 217) 0%, rgba(242,242,235,1) 27%, rgba(242,241,237,1) 69%, rgba(210,210,210,1) 100%);
+}
+
+.footer_text h6 {
+	color: #323a45;
+	font-size: 20px;
+	font-weight: 800;
+	margin-top: 10px;
+}
+
+.footer_text a {
+	margin-top: 10px;
+	color: #004cd0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 25px;
+	letter-spacing: 0.7px;
+}
+
+.footer_text a:hover{
+    color: #7872e9;
+}
+.social_media {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.social_media img{
+    transition: all .2s ease-in-out;
+}
+
+.social_media img:hover{
+    transform: scale(1.2);
+}
+
+.social_media img {
+	width: 30px;
+	height: 30px;
+}
