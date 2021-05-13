@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Assignment 7</title>
+<meta charset="utf-8">
+<meta name="description" content="working with forms from float CSS to grid">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+form {
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid black;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+form input {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background: white;
+  border: 1px solid #9c9c9c;
+  text-align: center;
+
+
+}
+label {
+  text-align: right;
+  display: block;
+  padding: 0.5em 1.5em 0.5em 0;
+}
+
+.myinput {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+
+input[type="date"]{
+  text-align: left;
+}
+input:focus {
+  background-color: gold;
+}
+form div { 
+  text-align:center; 
+}
+input[type="submit"], input[type="reset"], a {
+  cursor: pointer;
+  background: lightgray;
+  padding: 0.7em;
+  border: 0;
+}
+h1 { 
+  text-align: center; 
+  font-style: italic; 
+  color: gold; 
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+footer{
+  text-align: center;
+  margin-top: 20px;
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+      <h1>Assignment 7 - working with forms</h1>
+    </header>
+    
+    <main>
+      <form class="form1" action="#" method="post">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" class="myinput" maxlength="15" required>
+
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" class="myinput" maxlength="25">
+
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" class="myinput" min="18" max="65" >
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" class="myinput">
+
+            <label for="membership">Date of Membership</label>
+            <input type="date" name="membership" id="membership" class="myinput" max="2021-12-31" >
+
+            <label for="reward">Choose your reward</label>
+            <input type="text" name="reward" id="reward" class="myinput" list="rewards">
+              <datalist id="rewards">
+                  <option value="Two-year Member Magazine subscription"></option>
+                  <option value="2 Tickets to Annual Seminar"></option>
+                  <option value="Voucher #100 food during seminar"></option>
+                  <option value="1-day hotel stay for Seminar"></option>
+              </datalist>
+
+
+            <div><input type="submit" value="Submit"> &nbsp; <input type="reset" value="Clear"></div>
+      </form>
+    </main>
+
+    <footer>
+      <a href="assignments.html">CNIT 132 Assignments</a>
+    </footer>
+    
+</body>
+</html>
