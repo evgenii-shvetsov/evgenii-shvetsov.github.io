@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 132, Homework #5. On this page we are implementing best practices of html5 and css3 to our old html file">
+    <meta name="keywords" content="HTML, CSS, Homepage">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Very old HTML</title>
+    <link rel="stylesheet" href="./styles/style_hw2.css">
+</head>
+
+<body> 
+            
+    <main>
+        <section>
+            <h1>This is the first heading</h1> 
+            <p>This is my first paragraph and all the paragraphs in this page will start with a bigger font</p>
+            <p>My life as a web developer, has been pretty much amazing! I started developing web pages when there was no CSS to be used and all formatting was done using HTML tags that currently are considered deprecated or even eliminated from good web developed pages. One example of tags that have been eliminated are: <span class="inner_p_color">&lt;font&gt;, &lt;center&gt;</span>. There are some attributes that have been also eliminated in order to clean more the HTML code and put all the formatting (style) to CSS.</p>
+        </section>
+
+        <section>
+            <h2>Using CSS</h2>
+            <p>When CSS was created, the main idea was exactly to take all of these formatting tags and attributes from the HTML document and transfer them to an external file that would only take care of formatting the HTML page. The idea is that the HTML document should be focused on the content of the page and the formatting, even layout, would be in a separated file.</p>
+            <p>Whis standard has been supported and adopted world wide by W3C (<span class="inner_p_color">World Wide Web Consortium</span>) which is the organization that sets the standards for web development.</p>
+        </section>
+
+        <section>
+            <h2 id="bigger_h2">End of this exercise</h2>
+            <p>At the end of this exercise, you will take all of these bad attributes and formatting tags that are taking too much space in this HTML document and you will create an <span class="inner_p_color">embedded CSS</span> using the <span class="inner_p_color">&lt;style&gt; tag</span> (of course, placing this tag in the appropriate section of your document). Within that style tag, you will transfer all the formatting you see in this page and create appropriate CSS in order to clean the HTML document without changing the formatting that this old style HTML has created!</p>
+            <p>Tis a link to <a href="http://www.ccsf.edu">City College web site</a>. After you visit this page, this link should be white due to the vlink attribute in the body tag. If you have never visited this link, then, it will be red due to the link attribute in the body tag as well.</p>
+        </section>
+
+        <section>
+            <h3>The table showing below</h3>
+            <table>
+            <tr><td><span class="td_bold">This table should have a cyan background color and the text is centralized within each column</span></td><td>Second column, first row</td></tr>
+            <tr><td><span class="td_bold">Would you please animate from cyan to green background?</span></td><td>Second column, second row</td></tr>
+            <tr><td><span class="td_bold">Remember to also animate the color of the font from black to white</span></td><td>Third column, third row</td></tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <a href="assignments.html">CNIT 132 Assignments</a>
+    </footer>
+
+</body>
+</html>
