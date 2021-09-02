@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #4. Part #1.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, JQuery">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #4. Part 1</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script> 
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+            });
+
+        $( function() {
+            $( "#draggable" ).draggable();
+  } );
+    </script>
+
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="../styles/images/logo.png" alt="ccsf logo"></a></div>
+            <div class="header_text"><h1>Homework 4. Part 1</h1></div>
+        </header>
+
+        <section class="main"> 
+                <nav>
+                    <ol class="navigation">
+                        <li><a href="../index.html" class="myButton">Home & HW 1</a></li>
+                        <li><a href="../hw4.html" class="myButton">HW 4. Main</a></li>
+                        <li><a href="../hw4_parts/part_1.html" class="myButton">HW 4. Part 1</a></li>
+                        <li><a href="../hw4_parts/part_2.html" class="myButton">HW 4. Part 2</a></li>
+
+                    </ol>
+                </nav>
+            
+                <section class="description">
+                    <h4>Part 1A</h4>
+                    <br>
+                    <p>The product of every fourth integer from 5 to 21 inclusive is:</p><br>
+                    <p id="res_1A"></p><br>
+                    <p>The sum of every fourth integer from 5 to 21 inclusive is:</p> <br>
+                    <p id="res_2A"></p><br><br>
+                    
+                    <h4>Part 1B</h4> 
+                    <br>
+                    <p>The product of every third integer from 3 to 21 inclusive is:</p> <br>
+                    <p id="res_1B"></p><br>
+                    <p>The sum of every third integer from 3 to 21 inclusive is:</p> <br>
+                    <p id="res_2B"></p><br>
+
+                    <div id ="draggable">
+                        <p>drag me around</p>
+                    </div>
+                   
+                </section>
+            </section>
+        
+            <script>
+                //PART A
+                let product = 1;
+                let sum = 0;
+                let multiplication = " * ";
+                let adding = " + ";
+    
+                for (let i = 5; i <= 21; i += 4){
+                    product *= parseInt(i);
+                    sum += parseInt(i);
+    
+                    if(i == 21){
+                        multiplication = " = ";
+                        adding = " = ";
+                    }
+                    document.getElementById('res_1A').innerHTML += (i + '' + multiplication);
+                    document.getElementById('res_2A').innerHTML += (i + '' + adding);
+                }
+    
+                document.getElementById('res_1A').innerHTML += product;
+                document.getElementById('res_2A').innerHTML += sum;
+
+                //PART B
+                product = 1;
+                sum = 0;
+                multiplication = " * ";
+                adding = " + ";
+                let j = 3;
+
+                do {
+                    product *= j;
+                    sum += j;
+
+                    if(j == 21){
+                            multiplication = " = ";
+                            adding = " = ";
+                    }    
+
+                    document.getElementById("res_1B").innerHTML += (j + '' +  multiplication);
+                    document.getElementById("res_2B").innerHTML += (j + '' +  adding);
+                
+                        j+=3;
+
+                } while(j <=21);
+
+                    document.getElementById("res_1B").innerHTML += product;
+                    document.getElementById("res_2B").innerHTML += sum;
+
+            </script>
+    
+        <footer>
+                <section class="footer_details">
+                    <div class="footer_text">
+                        <h6>Evgenii Shvetsov</h6>
+                        <p>Copyright 2021. All rights reserved</p>
+                    </div>
+                    <div class="social_media">
+                        <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/facebook.png" alt="fb"></a>
+                        <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/twitter.png" alt="twitter"></a>
+                        <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/linkedin.png" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/instagram.png" alt="instagram"></a>
+                    </div>
+                </section>
+        </footer>
+    </section>
+</body>
+</html>

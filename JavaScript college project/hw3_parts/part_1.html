@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #3. Part #1.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, JQuery">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #3. Part 1</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script> 
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+            });
+    </script>
+        <script>
+            function process(){
+                    let hwAvg = parseInt(document.getElementById("hwAvg").value);
+                    let midExam = parseInt(document.getElementById("midExam").value);
+                    let finalExam = parseInt(document.getElementById("finalExam").value);
+                    let participation = parseInt(document.getElementById("participation").value);
+                    let errorMessage = "Please type positive integers less than a 100";
+    
+                    if(isNaN(hwAvg) || hwAvg < 0 || hwAvg > 100 || hwAvg == '' ||
+                            isNaN(midExam) || midExam < 0 || midExam > 100 || midExam ==''||
+                                isNaN(finalExam) || finalExam < 0 || finalExam > 100 || finalExam == ''||
+                                    isNaN(participation) || participation < 0 || participation > 100 || participation =='')
+                                    {
+                                        document.getElementById("finalResult").value = errorMessage;
+                                    } else 
+                                    {
+                                        let finalAverage = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * participation)
+                                        
+                                        switch(true){
+                                            case (finalAverage >= 90 && finalAverage <= 100):
+                                                document.getElementById("finalResult").value = ('Your final average is: ' + Math.round(finalAverage) + "\nYour grade is: A ")
+                                                break;
+                                            case (finalAverage >= 80 && finalAverage <= 89):
+                                                document.getElementById("finalResult").value = ('Your final average is: ' + Math.round(finalAverage) + "nYour grade is: B ")
+                                                break;
+                                            case (finalAverage >= 70 && finalAverage <= 79):
+                                                document.getElementById("finalResult").value = ('Your final average is: ' + Math.round(finalAverage) + "\nYour grade is: C ")
+                                                break;
+                                            case (finalAverage >= 60 && finalAverage <= 69):
+                                                document.getElementById("finalResult").value = ('Your final average is: ' + Math.round(finalAverage) + "\nYour grade is: D \nYou must retake the course")
+                                                break;
+                                        
+                                            default:
+                                                document.getElementById("finalResult").value = ('Your final average is: ' + Math.round(finalAverage) + "\nYour grade is: F \nYou must retake the course" )
+                                                }
+                                    }
+                    
+            }
+        </script>
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="../styles/images/logo.png" alt="ccsf logo"></a></div>
+            <div class="header_text"><h1>Homework 3. Part 1</h1></div>
+        </header>
+
+        <section class="main"> 
+                <nav>
+                    <ol class="navigation">
+                        <li><a href="../index.html" class="myButton">Home & HW 1</a></li>
+                        <li><a href="../hw3.html" class="myButton">HW 3. Main</a></li>
+                        <li><a href="../hw3_parts/part_1.html" class="myButton">HW 3. Part 1</a></li>
+                        <li><a href="../hw3_parts/part_2.html" class="myButton">HW 3. Part 2</a></li>
+                        <li><a href="../hw3_parts/part_3.html" class="myButton">HW 3. Part 3</a></li>
+                        <li><a href="../hw3_parts/part_4.html" class="myButton">HW 3. Part 4</a></li>
+                    </ol>
+                </nav>
+            
+                <section class="description">
+                    <h4>Students Grades</h4>
+                    <br><br>
+                    <form name="myform">
+                        Homework average: <input type="number" id="hwAvg"><br><br>
+                        Mid-term exam score: <input type="number" id="midExam" ><br><br>
+                        Final exam score: <input type="number" id="finalExam" ><br><br>
+                        Participation: <input type="number" id="participation" ><br><br>
+                        Final average: <textarea rows="6" cols="40" id="finalResult"></textarea><br><br>
+                        <input  id="btn_submit" type="button" onclick="process()" value="Submit" />
+                        <input id="btn_reset" type="reset" value="Reset" /><br><br>
+                    </form>
+                </section>
+            </section>
+        
+    
+        <footer>
+                <section class="footer_details">
+                    <div class="footer_text">
+                        <h6>Evgenii Shvetsov</h6>
+                        <p>Copyright 2021. All rights reserved</p>
+                    </div>
+                    <div class="social_media">
+                        <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/facebook.png" alt="fb"></a>
+                        <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/twitter.png" alt="twitter"></a>
+                        <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/linkedin.png" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/instagram.png" alt="instagram"></a>
+                    </div>
+                </section>
+        </footer>
+    </section>
+</body>
+</html>

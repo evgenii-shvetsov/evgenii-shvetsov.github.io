@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #7. Part #2.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, JQuery">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #7. Part 2</title>
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+   
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+    <script>    
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+            
+            $('.navigation li').hover(
+                function(){
+                    $('ul', this).fadeIn();},
+                function(){    
+                    $('ul', this).fadeOut();
+            });
+        
+        });
+
+
+    </script>
+    
+    <style>
+        h3, h4{
+            text-align: center;
+        }
+        h4{
+            margin-top: 20px;
+        }
+
+        .navigation {
+            margin-top: 0;
+        }
+        .navigation ul{
+            display: none;
+            position: absolute;
+        }
+        .myButton {
+            margin-bottom: 8px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .myButtonDrop {
+            margin-bottom: 5px;
+            font-weight: normal;
+        }
+
+        
+
+    </style>
+        
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="../styles/images/logo.png" alt="ccsf logo"></a></div>
+            <div class="header_text"><h1>Homework 7. Part 2</h1></div>
+        </header>
+  
+        <section class="main"> 
+            <nav>
+                <ul class="navigation">
+                    <li><a href="../index.html" class="myButton">Home & HW 1</a></li>
+                    
+                    <li><a href="../hw2.html" class="myButton">Homework 2</a>
+                        <ul>
+                            <li><a href="../hw2_parts/part_1.html" class="myButton myButtonDrop">Part 1</a></li>
+                            <li><a href="../hw2_parts/part_2.html" class="myButton myButtonDrop">Part 2</a></li>
+                            <li><a href="../hw2_parts/part_3.html" class="myButton myButtonDrop">Part 3</a></li>
+                            <li><a href="../hw2_parts/hw2_extra.html" class="myButton myButtonDrop">Extra</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../hw3.html" class="myButton">Homework 3</a>
+                        <ul>
+                            <li><a href="../hw3_parts/part_1.html" class="myButton myButtonDrop">Part 1</a></li>
+                            <li><a href="../hw3_parts/part_2.html" class="myButton myButtonDrop">Part 2</a></li>
+                            <li><a href="../hw3_parts/part_3.html" class="myButton myButtonDrop">Part 3</a></li>
+                            <li><a href="../hw3_parts/part_4.html" class="myButton myButtonDrop">Part 4</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../hw4.html" class="myButton">Homework 4</a>
+                        <ul>
+                            <li><a href="../hw4_parts/part_1.html" class="myButton myButtonDrop">Part 1</a></li>
+                            <li><a href="../hw4_parts/part_2.html" class="myButton myButtonDrop">Part 2</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../hw5.html" class="myButton">Homework 5</a>
+                        <ul>
+                            <li><a href="../hw5_parts/part_1.html" class="myButton myButtonDrop">Part 1</a></li>
+                            <li><a href="../hw5_parts/part_2.html" class="myButton myButtonDrop">Part 2</a></li>
+                            <li><a href="../hw5_parts/part_3.html" class="myButton myButtonDrop">Part 3</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../hw6.html" class="myButton">Homework 6</a>
+                        <ul>
+                            <li><a href="../hw6_parts/part_1.html" class="myButton myButtonDrop">Part 1</a></li>
+                            <li><a href="../hw6_parts/part_2.html" class="myButton myButtonDrop">Part 2</a></li>
+                            <li><a href="../hw6_parts/part_3.html" class="myButton myButtonDrop">Part 3</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../hw7.html" class="myButton">Homework 7</a>
+                        <ul>
+                            <li><a href="../hw7_parts/part_1.html" class="myButton myButtonDrop">Part 1</a></li>
+                            <li><a href="../hw7_parts/part_2.html" class="myButton myButtonDrop">Part 2</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="../hw8.html" class="myButton">Homework 8</a>
+                        <ul>
+                            <li><a href="../hw8_parts/part_1.html" class="myButton myButtonDrop">Part 1</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+
+    </section>
+
+    
+
+    <footer>
+        <section class="footer_details">
+            <div class="footer_text">
+                <h6>Evgenii Shvetsov</h6>
+                <p>Copyright 2021. All rights reserved</p>
+            </div>
+            <div class="social_media">
+                <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/facebook.png" alt="fb"></a>
+                <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/twitter.png" alt="twitter"></a>
+                <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/linkedin.png" alt="linkedin"></a>
+                <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/instagram.png" alt="instagram"></a>
+            </div>
+    </section>
+</footer>
+</section>
+</body>
+</html>

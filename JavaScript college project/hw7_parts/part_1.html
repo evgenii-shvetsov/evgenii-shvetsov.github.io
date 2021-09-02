@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #7. Part #1.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, JQuery">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #7. Part 1</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script> 
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+            // Event handler to all radio buttons
+            $('#modificationTable :radio').click(function(){
+                $(".description").css($(this).attr("name"), $(this).val());
+            });
+        
+             // Event handler for the FontSize values
+             $("#fontSize").change(function () {
+                $(".description").css($(this).attr("name"), $(this).val());
+            });
+
+            // Event handler for check boxes
+            $("#modificationTable :checkbox").change(function () {
+                $(".description").css($(this).attr("name"), this.checked ? $(this).val() : "");
+            });
+        });
+
+
+    </script>
+    <style>
+     .optionsUpgrade {
+        margin: 0 auto;
+     }
+     h2{
+         text-align: center;
+     }
+
+     table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+}
+     
+       
+    </style>
+
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="../styles/images/logo.png" alt="ccsf logo"></a></div>
+            <div class="header_text"><h1>Homework 7. Part 1</h1></div>
+        </header>
+
+        <section class="main"> 
+                <nav>
+                    <ol class="navigation">
+                        <li><a href="../index.html" class="myButton">Home & HW 1</a></li>
+                        <li><a href="../hw7.html" class="myButton">HW 7. Main</a></li>
+                        <li><a href="../hw7_parts/part_1.html" class="myButton">HW 7. Part 1</a></li>
+                        <li><a href="../hw7_parts/part_2.html" class="myButton">HW 7. Part 2</a></li>
+                    </ol>
+                </nav>
+
+                <section class="optionsUpgrade">
+                    <form id="layout">
+                        <h2>Choose options to modify the text:</h2>
+                        <table id="modificationTable"><br>
+                            <tr>
+                                <th>Background Color</th>
+                                <th>Font Size</th>
+                                <th>Font Family</th>
+                                <th>Font Style/Weight</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label><input type="radio" name="background-color" value="#e0ffff"
+                                                  id="lightCyan">LightCyan</label><br>
+                                    <label><input type="radio" name="background-color" value="#b0c4de"
+                                                  id="lightSteelBlue">LightSteelBlue</label><br>
+                                    <label><input type="radio" name="background-color" value="#708090"
+                                                  id="slateGray">SlateGray</label><br>
+                                    <label><input type="radio" name="background-color" value=""
+                                                  id="defaultColor" checked>Default</label>
+                                </td>
+
+                                <td>
+                                    <select name="font-size" size="4" id="fontSize">
+                                        <option value="xx-small">xx-small</option>
+                                        <option value="large">large</option>
+                                        <option value="xx-large">xx-large</option>
+                                        <option value="" selected>Default</option>
+                                    </select>
+                                </td>
+
+                                <td>
+                                    <label><input type="radio" name="font-family" value='"Times New Roman", serif'
+                                                id="timesNewRoman">Times New Roman</label><br>
+                                    <label><input type="radio" name="font-family" value='"Lucida Handwriting", cursive'
+                                                id="lucida">Lucida Handwriting</label><br>
+                                    <label><input type="radio" name="font-family" value='"Papyrus", cursive'
+                                                id="papyrus">Papyrus</label><br>
+                                    <label><input type="radio" name="font-family" value=""
+                                                id="defaultFont" checked>Default</label>
+                                </td>
+
+                                <td>
+                                    <label><input type="checkbox" name="font-style" value="italic" id="checkItalic">Italic</label><br>
+                                    <label><input type="checkbox" name="font-weight" value="bolder" id="checkBolder">Bolder</label><br>
+                                    <label><input type="checkbox" name="font-weight" value="lighter" id="checkLighter">Lighter</label><br>
+                                </td>
+                            </tr>
+                        </table>
+                    </form><br><br>
+                </section>
+            
+                <section class="description">
+                    <h2>What is JavaScript</h2><br>
+                    <p>JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved.</p>
+                
+                </section>
+            </section>
+
+    
+        <footer>
+                <section class="footer_details">
+                    <div class="footer_text">
+                        <h6>Evgenii Shvetsov</h6>
+                        <p>Copyright 2021. All rights reserved</p>
+                    </div>
+                    <div class="social_media">
+                        <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/facebook.png" alt="fb"></a>
+                        <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/twitter.png" alt="twitter"></a>
+                        <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/linkedin.png" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/instagram.png" alt="instagram"></a>
+                    </div>
+                </section>
+        </footer>
+    </section>
+</body>
+</html>

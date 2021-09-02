@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #2. Main page o the homework  №2. Containts of 3 parts.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #2</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script> 
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+            });
+    </script>
+</head>
+<body>
+    <section class="container">
+            <header>
+                <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="styles/images/logo.png" alt="ccsf logo"></a></div>
+                <div class="header_text"><h1>CNIT 133 Homework 2 - Basic Operations</h1></div>
+            </header>
+            
+            <section class ="main"> 
+                <nav>
+                    <ol class="navigation">
+                        <li><a href="./index.html" class="myButton">Home & HW 1</a></li>
+                        <li><a href="./hw2.html" class="myButton">HW 2. Main</a></li>
+                        <li><a href="./hw2_parts/part_1.html" class="myButton">HW 2. Part 1</a></li>
+                        <li><a href="./hw2_parts/part_2.html" class="myButton">HW 2. Part 2</a></li>
+                        <li><a href="./hw2_parts/part_3.html" class="myButton">HW 2. Part 3</a></li>
+                        <li><a href="./hw2_parts/hw2_extra.html" class="myButton">HW 2. Extra</a></li>
+                    </ol>
+                </nav>
+
+                <section class="description">
+                    <p>
+                        <a class="parts" href="./hw2_parts/part_1.html">Part 1</a>  <br>
+                        Web page that contains a script that displays in pairs and strong (bold), the letters ab and the numbers 12 and 34 on the same line, with each pair of characters separated by one space. <br><br>
+                    </p>
+                    <p>
+                        <a class="parts" href="./hw2_parts/part_2.html">Part 2</a>  <br>
+                        Web page that contains a script that inputs three integers via form text boxes and displays the sum, average, and product of the three integers, and the smallest and largest of the three integers. <br><br>
+                    </p>
+                    <p>
+                        <a class="parts" href="./hw2_parts/part_3.html">Part 3</a>  <br>
+                        Web page that contains a script that inputs 5 numbers and determines and displays the count of the negative numbers, the number of positive numbers, and the number of zeros.<br><br>
+                    </p>
+                    <p>
+                        <a class="parts" href="./hw2_parts/hw2_extra.html">Extra</a>  <br>
+                        Web page containing a script that the user will input an amount in U.S. dollars and display in a table its equivalent in each of the above foreign currencies, rounded to 2 decimal places. 
+                    </p>
+                </section>
+            </section>
+
+            <footer>
+                <section class="footer_details">
+                    <div class="footer_text">
+                        <h6>Evgenii Shvetsov</h6>
+                        <p>Copyright 2021. All rights reserved</p>
+                    </div>
+                    <div class="social_media">
+                        <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/facebook.png" alt="fb"></a>
+                        <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/twitter.png" alt="twitter"></a>
+                        <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/linkedin.png" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/instagram.png" alt="instagram"></a>
+                    </div>
+                </section>
+            </footer>
+    </section>
+</body>
+</html>
