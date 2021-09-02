@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #6. Part #2.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, JQuery">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #6. Part 2</title>
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+   
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        h3, h4{
+            text-align: center;
+        }
+        h4{
+            margin-top: 20px;
+        }
+
+    </style>
+
+    <script>    
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+            });
+
+
+        function search(){
+            let counter=0;
+            
+            let mainChar= document.getElementById("mainChar").value.toLowerCase().charAt( 0 );
+            mainChar= mainChar.toLowerCase();
+
+
+            let textForSearch = document.forms["charSearch"].elements["userText"].value;  
+            textForSearch = textForSearch.toLowerCase(); 
+  
+                        
+            for (i=0; i < textForSearch.length; i++)
+                     {
+
+                    if (textForSearch.charAt(i) == mainChar)
+                             counter++;     
+                     }         
+      
+            if ( counter == 0 ) {
+                document.getElementById("answer").innerHTML ="not found"; 
+                openWindow();
+
+            }  else
+               document.getElementById("answer").value=counter + 
+                  " occurrence(s) of " + mainChar + " found";
+         };
+
+
+         function openWindow(){
+            
+            let mainChar = document.getElementById("mainChar").value;
+
+            let outputText = "<html>\n";
+                outputText += "<head>\n";
+                outputText += "<title>Popup Window</title>\n";
+                outputText += "</head>\n";
+                outputText += "<body>\n";
+                outputText += "<div style='margin:0 auto;'>\n";
+                outputText += "<span><strong>Search character " + mainChar + " not found in text string</strong></span>\n";
+                outputText += "<input type='button' value='Close Window' onclick='window.close()'>\n";
+                outputText += "</div>\n";
+                outputText += "</body>\n";
+                outputText += "</html>";
+            
+        
+            let newWindow = window.open("", "new_window",
+            "top=50,left=1,width=300,height=100");
+
+            newWindow.focus();
+            newWindow.document.write(outputText);
+            newWindow.document.close();
+         }
+         
+
+    </script>
+    
+        
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="../styles/images/logo.png" alt="ccsf logo"></a></div>
+            <div class="header_text"><h1>Homework 6. Part 2</h1></div>
+        </header>
+  
+        <section class="main"> 
+            <nav>
+                <ol class="navigation">
+                    <li><a href="../index.html" class="myButton">Home & HW 1</a></li>
+                    <li><a href="../hw6.html" class="myButton">HW 6. Main</a></li>
+                    <li><a href="../hw6_parts/part_1.html" class="myButton">HW 6. Part 1</a></li>
+                    <li><a href="../hw6_parts/part_2.html" class="myButton">HW 6. Part 2</a></li>
+                    <li><a href="../hw6_parts/part_3.html" class="myButton">HW 6. Part 3</a></li>
+                </ol>
+            </nav>
+
+
+        <section class="form">
+            <h4>Searching for a charachter</h4>
+
+            <form name="charSearch">
+                <p>
+                    Please type a text in the form below: <br>
+                    <textarea name="userText" type="text"  cols="50" rows="5" autofocus></textarea> <br><br>
+
+                    Type a character to search for: <br>
+                    <input id="mainChar" type="text" size="8">
+                    <input type="button" value="Search" onclick="search();">
+                    <input type="reset" value="Reset" onClick="location.reload();"><br><br>
+
+                    Occurrences of the search character within the text: <br>
+                    <textarea id="answer" cols="50" rows="2" readonly></textarea>
+                </p>
+            </form>
+             
+        </section>
+    </section>
+
+    
+
+    <footer>
+        <section class="footer_details">
+            <div class="footer_text">
+                <h6>Evgenii Shvetsov</h6>
+                <p>Copyright 2021. All rights reserved</p>
+            </div>
+            <div class="social_media">
+                <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/facebook.png" alt="fb"></a>
+                <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/twitter.png" alt="twitter"></a>
+                <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/linkedin.png" alt="linkedin"></a>
+                <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/instagram.png" alt="instagram"></a>
+            </div>
+    </section>
+</footer>
+</section>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #3. Part #3.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, JQuery">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #3. Part 3</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+            });
+    
+        function celToFar(){
+            let initTemp = parseInt(document.getElementById("initTemp").value);
+            let Fahrenheit = (9/5 * initTemp) + 32;
+                if (Number.isInteger(initTemp)){
+                    document.getElementById("result").value = "";
+                    document.getElementById("result").value = (initTemp + " degrees in Celsius equals to " + Math.round(Fahrenheit) + " degrees in Fahrenheit");
+                } else {
+                    document.getElementById("result").value = ("Please type integers")
+                }
+            }
+
+        function farToCel(){
+            let initTemp = parseInt(document.getElementById("initTemp").value);
+            let Celsius = 5/9 * (initTemp - 32);
+                if (Number.isInteger(initTemp)){
+                    document.getElementById("result").value = "";
+                    document.getElementById("result").value = (initTemp + " degrees in Fahrenheight equals to " + Math.round(Celsius) + " degrees in Celsius");
+                } else {
+                    document.getElementById("result").value = ("Please type integers")
+                }
+            }
+        </script>
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="../styles/images/logo.png" alt="ccsf logo"></a></div>
+            <div class="header_text"><h1>Homework 3. Part 3</h1></div>
+        </header>
+        
+        <section class="main"> 
+            <nav>
+                <ol class="navigation">
+                    <li><a href="../index.html" class="myButton">Home & HW 1</a></li>
+                    <li><a href="../hw3.html" class="myButton">HW 3. Main</a></li>
+                    <li><a href="../hw3_parts/part_1.html" class="myButton">HW 3. Part 1</a></li>
+                    <li><a href="../hw3_parts/part_2.html" class="myButton">HW 3. Part 2</a></li>
+                    <li><a href="../hw3_parts/part_3.html" class="myButton">HW 3. Part 3</a></li>
+                    <li><a href="../hw3_parts/part_4.html" class="myButton">HW 3. Part 4</a></li>
+                </ol>
+            </nav>
+
+            <section class="form"> 
+                <h4>Temperature Converter</h4>
+                <form name="myform">
+                    Enter the Temperature: <input type="number" id='initTemp'><br><br>
+                    Result: <textarea id="result" readonly rows="5" cols="45"></textarea><br><br>
+                    <input  id="CeltoFar" type="button" onclick="celToFar()" value="Celsius to Fahrenheit" />
+                    <input  id="FarToCel" type="button" onclick="farToCel()" value="Fahrenheit to Celcius" /><br>
+                    <input id="btn_reset" type="reset" value="Reset" /><br><br>
+                </form>
+            </section>
+        </section>
+    
+        <footer>
+            <section class="footer_details">
+                <div class="footer_text">
+                    <h6>Evgenii Shvetsov</h6>
+                    <p>Copyright 2021. All rights reserved</p>
+                </div>
+                <div class="social_media">
+                    <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/facebook.png" alt="fb"></a>
+                    <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/twitter.png" alt="twitter"></a>
+                    <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/linkedin.png" alt="linkedin"></a>
+                    <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/instagram.png" alt="instagram"></a>
+                </div>
+         </section>
+        </footer>
+    </section>
+</body>
+</html>

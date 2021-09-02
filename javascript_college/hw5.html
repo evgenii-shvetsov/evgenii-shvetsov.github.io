@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #5. Main page o the homework  №5. Containts of 5 parts.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #5</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script> 
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+            });
+    </script>
+</head>
+<body>
+    <section class="container">
+            
+            <header>
+                <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="styles/images/logo.png" alt="ccsf logo"></a></div>
+                <div class="header_text"><h1>CNIT 133 Homework 5 - Arrays</h1></div>
+            </header>
+            
+            <section class="main"> 
+                <nav>
+                    <ol class="navigation">
+                        <li><a href="./index.html" class="myButton">Home & HW 1</a></li>
+                        <li><a href="./hw5.html" class="myButton">HW 5. Main</a></li>
+                        <li><a href="./hw5_parts/part_1.html" class="myButton">HW 5. Part 1</a></li>
+                        <li><a href="./hw5_parts/part_2.html" class="myButton">HW 5. Part 2</a></li>
+                        <li><a href="./hw5_parts/part_3.html" class="myButton">HW 5. Part 3</a></li>
+                    </ol>
+                </nav>
+
+                <section class="description">
+                    <p>
+                        <a class="parts" href="./hw5_parts/part_1.html">Part 1</a>  <br>
+                        Create a webpage containing a form that displays an input text box, radio buttons, checkboxes, and select items; along with a script that executes form validation.<br><br>
+
+                        Your script should validate whether the user has entered data in the input text box, has checked a radio button, has checked at least one checkbox, and has selected an option from the list of options in the select element.<br><br>
+
+                        Use a submit button to invoke the validation script, so that the form is processed only when the form fields are valid. If a field is invalid then display a message to the user.<br><br>
+
+                        In your form statement, use method="post" and an action that can be a mailto or a webpage(displaying that the form has been processed), but be sure to use input type="submit" for your submit button. Alternatively you can leave out the form's action and method, but then you should use an input type="button", along with displaying any appropriate messages. <br><br>
+
+                        Make sure that if you display an error message because of a single field, you do not clear out the whole entire form unless all the fields would have error messages associated to them! It's horrible to have the user fill out all the form again when there was only one field with error, right? Remember about this type of detail that is related to user experience!<br><br><br>
+                    </p>
+                    <p>
+                        <a class="parts" href="./hw5_parts/part_2.html">Part 2</a>  <br>
+                        Create a 2nd webpage that contains a script that utilizes 2 pulldown menus. The first one should utilize an onchange event handler. The second should utilize a button with an onclick event handler to navigate to a page after an option is selected. Each pulldown menu should include at least 3 URL destinations. <br><br><br>
+                    </p>
+                    <p>
+                        <a class="parts" href="./hw5_parts/part_3.html">Part 3</a>  <br>
+                        Given the following table of data about several of our states from the 2018 census, create a webpage that enables the user to enter a state name (full or just the two characters that represent the state) and have the State Name, State Capital, and population appear in separate input box or textarea. DO NOT USE ALERT!!!<br><br>
+
+                        The user should be able to start the script by pressing the button, "State Info". Just use the states that are given in the following table for your array. Allow for the user to enter the name of the state in either lower case or upper case letters. Note that solving this problem involves a two-dimensional array. Make sure you validate the input for a correct state abbreviation or state name. If the input is invalid then display an error message.  If the user enter a state that is not part of the list, show a message to the user but if the user retypes the state and click the Submit button and the state is valid, then the "error" message should not be shown and, instead, you should show the information that is coming from the table below - for example, suppose the user typed "california" (all in lowercase), you could show a message with something as:<br>
+                        "Thanks for your inquiry, here is the information you requested:<br>
+                        State abbr = CA<br>
+                        State Name = California<br>
+                        Capital = Sacramento<br>
+                        Population = 39,557,045"<br><br>
+                    </p>
+
+                </section>
+            </section>
+
+            <footer>
+                <section class="footer_details">
+                    <div class="footer_text">
+                        <h6>Evgenii Shvetsov</h6>
+                        <p>Copyright 2021. All rights reserved</p>
+                    </div>
+                    <div class="social_media">
+                        <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/facebook.png" alt="fb"></a>
+                        <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/twitter.png" alt="twitter"></a>
+                        <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/linkedin.png" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/instagram.png" alt="instagram"></a>
+                    </div>
+            </section>
+            </footer>
+
+    </section>
+</body>
+</html>

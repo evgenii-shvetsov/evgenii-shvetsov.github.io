@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #3. Main page o the homework  №3. Containts of 4 parts.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #3</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script> 
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+            });
+    </script>
+</head>
+<body>
+    <section class="container">
+            
+            <header>
+                <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="styles/images/logo.png" alt="ccsf logo"></a></div>
+                <div class="header_text"><h1>CNIT 133 Homework 3 - Functions</h1></div>
+            </header>
+            
+            <section class="main"> 
+                <nav>
+                    <ol class="navigation">
+                        <li><a href="./index.html" class="myButton">Home & HW 1</a></li>
+                        <li><a href="./hw3.html" class="myButton">HW 3. Main</a></li>
+                        <li><a href="./hw3_parts/part_1.html" class="myButton">HW 3. Part 1</a></li>
+                        <li><a href="./hw3_parts/part_2.html" class="myButton">HW 3. Part 2</a></li>
+                        <li><a href="./hw3_parts/part_3.html" class="myButton">HW 3. Part 3</a></li>
+                        <li><a href="./hw3_parts/part_4.html" class="myButton">HW 3. Part 4</a></li>
+                    </ol>
+                </nav>
+
+                <section class="description">
+                    <p>
+                        <a class="parts" href="./hw3_parts/part_1.html">Part 1</a>  <br>
+                        Create a webpage that contains the heading, Student Grades, and inputs a student's homework average, mid-term exam score, final exam score, and participation (all those grades will be entered as integers). Create a script that checks for valid input, i.e., that the input is between 0-100 and that, of course, the input are all numbers. If all input is valid then calculate and display the student's final average according to the formula: <br><br>
+
+                        final average = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * participation)<br><br>
+
+                        Using form text boxes, display the student's final average (rounded to an integer) and final letter grade using the following criteria: <br><br>
+
+
+                        90-100	A<br>
+                        80-89	B<br>
+                        70-79	C<br>
+                        60-69	D<br>
+                        0-59	F<br>
+                        <br>
+                        If the student's final grade is 'D' or 'F' then display "Student must retake the course". Be sure to check for valid input and do not allow users to input values that will return NaN or any other "weird" result.  An error message should be displayed if the input is invalid and no result should be presented and if all input is valid, the result should be presented as requested and no error message should be shown. <br><br><br><br>
+                    </p>
+                    <p>
+                        <a class="parts" href="./hw3_parts/part_2.html">Part 2</a>  <br>
+                        A large company pays its salespeople on a commission basis. The salespeople receive $200 per week, plus 9% of their gross sales for that week. For example, a salesperson who sells $5000 worth of merchandise in a week receives $200 plus 9% of $5000, or a total of $650. You have been supplied with a list of the items sold by each salesperson. The value of these items are as follows: <br><br>
+
+                        Item &nbsp;&nbsp;	Value<br>
+                        1 &nbsp;&nbsp;&nbsp;&nbsp;	239.99<br>
+                        2 &nbsp;&nbsp;	&nbsp;&nbsp;129.75<br>
+                        3 &nbsp;&nbsp;&nbsp;&nbsp;	99.95<br>
+                        4 &nbsp;&nbsp;&nbsp;&nbsp;	350.89<br><br>
+                        Create a web page that contains a script that includes at the top of your form  a text box for the salesperson's name for the user to enter. When the user's mouse hovers over this name field, use the jQuery UI tooltip coding to display the message "Please make sure that the salesperson's name is spelled correctly".<br><br>
+
+                        See this site for more about the jQuery UI tooltip (Links to an external site.).<br><br>
+
+                        Next input that salesperson's items sold. Then calculates how much the salesperson sold and how much they earned, and then output the results. Be sure to round the outputted results to 2 decimal places. Use input boxes to input the number sold for each of the items 1-4. You should also check for valid numeric input (make sure the number of items sold is never negative, < 0, as nobody sells negative number of items, right?) and right-justify all amounts. Here is an image showing a possible display that is using tables, and form elements (labels, input boxes, buttons, etc.)<br><br><br><br>
+                    </p>
+                    <p>
+                        <a class="parts" href="./hw3_parts/part_3.html">Part 3</a>  <br>
+                        Create a web page using input boxes that:<br><br>
+
+                        C = 5/9 * (F - 32) <br>
+
+                        F = (9/5 * C) + 32<br>
+
+                        The user will be allowed to enter a number in one input box you will provide. You will also provide two buttons: one to convert from Celsius to Farenheit and another button to convert from Fahrenheit to Celsius. Your form should have another input box or textarea that the user will not allowed to write anything as that's where you will put the result.<br><br>
+
+                        When the user clicks on one of those buttons, you need to convert the temperature entered by the user, using the right function to convert from C to F or from F to C.<br><br>
+
+                        If the user's input is invalid, present an error message and do not display any result. If the user's input is valid, present the converted result and do not present any past error message!<br><br>
+
+                        [Note that 0 degrees Celsius = 32 degrees Fahrenheit].<br><br>
+
+                        Make sure you present the final converted temperature with no decimal values, like you would present it for the public - meaning no decimals, just the integer number of the temperature. Remember that negative temperature IS VALID!<br><br><br><br>
+                    </p>
+                    <p>
+                        <a class="parts" href="./hw3_parts/part_4.html">Part 4</a>  <br>
+                        Computers are playing an increasing role in education. Write a program that will help an elementary school student learn multiplication. Use Math.random to produce two one-digit integers (0-9). It should then display a question such as:<br><br>
+
+                        How much is 6 times 7?<br><br>
+
+                        The student then types the answer into an input box. Your program checks the student's answer. If it is correct, display the message "Very good!" in a text area or another part of the page, and then prompt the user to see whether they wish to continue by using the confirm statement. If true, then generate a new question. If not, then exit the script and do not present another question.<br><br>
+
+                        If the answer to the multiplication question is wrong, display the message "No. Please try again." directly on the page in a textarea or another part of the page, and let the student try the same question again repeatedly until the student finally gets it right.<br><br>
+
+                        A separate function should be used to generate each new question. This function should be called once when the script begins execution and each time the user answers the question correctly. Note that whether the answer is correct or not, you should clear the answer box after the question is answered.<br><br>
+                    </p>
+                </section>
+            </section>
+
+            <footer>
+                <section class="footer_details">
+                    <div class="footer_text">
+                        <h6>Evgenii Shvetsov</h6>
+                        <p>Copyright 2021. All rights reserved</p>
+                    </div>
+                    <div class="social_media">
+                        <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/facebook.png" alt="fb"></a>
+                        <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/twitter.png" alt="twitter"></a>
+                        <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/linkedin.png" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/instagram.png" alt="instagram"></a>
+                    </div>
+            </section>
+            </footer>
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #5. Part #1.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, JQuery">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #5. Part 1</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script> <!-- input validation-->
+    <script> 
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+
+            $("#myform").validate({
+                messages: {
+                    name: "Please enter your name",
+                    rating: "Please select a rice type",
+                    topping: "Please select at least one topping",
+                    sauce: "Please select a sauce",
+                    },
+                errorPlacement: 
+                    function(error, element) {
+                        if ( element.is(":radio") || element.is(":checkbox")) {
+                            error.appendTo(element.parent());
+                        } else {
+                            error.insertAfter(element);
+                        }
+                            }
+                });
+        });
+
+    </script>
+    <style>
+        h3{
+            text-align: center;
+        }
+        .error{
+            color: red;
+            padding-left: 20px;
+        }
+        input{
+            margin-left: 5px;
+        }
+       
+    </style>
+
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="../styles/images/logo.png" alt="ccsf logo"></a></div>
+            <div class="header_text"><h1>Homework 5. Part 1</h1></div>
+        </header>
+
+        <section class="main"> 
+                <nav>
+                    <ol class="navigation">
+                        <li><a href="../index.html" class="myButton">Home & HW 1</a></li>
+                        <li><a href="../hw5.html" class="myButton">HW 5. Main</a></li>
+                        <li><a href="../hw5_parts/part_1.html" class="myButton">HW 5. Part 1</a></li>
+                        <li><a href="../hw5_parts/part_2.html" class="myButton">HW 5. Part 2</a></li>
+                        <li><a href="../hw5_parts/part_3.html" class="myButton">HW 5. Part 3</a></li>
+                    </ol>
+                </nav>
+            
+                <section class="form">
+                    <h3>Create your Poke Bowl</h3>
+                    <table>
+                        <tr>
+                        <td>
+                        <form action="../hw5_parts/form_submit.html" method="post"  id="myform" name="myform">
+                        
+                        <table>
+                          <tr>
+                            <td>Name</td>
+                            <td><input type="text" name="name" id="name" size="20" class="required" autofocus></td>
+                          </tr>
+                          
+                          <tr>
+                            <td><label for="rating" class="label">Rice:</label></td>
+                            <td>
+                                White<input type="radio" id="rating1" name="rating" class="required" value="white">
+                                Brown<input type="radio" id="rating2" name="rating" value="brown">
+                                Sushi rice<input type="radio" id="rating3" name="rating" value="sushi">
+                            </td>
+                          </tr>
+
+                          <tr>
+                          <td>Toppings: </td>
+                            <td>
+                                Greens<input type="checkbox" id="topping1" name="topping" value="greens" class="required">
+                                Sesame seeds<input type="checkbox" id="topping2" name="topping" value="sesame">
+                                Avocado<input type="checkbox" id="topping3" name="topping" value="avocado">
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td><label for="sauce" class="label">Sauce:</label></td>
+                            <td>
+                            <select name="occ" id="occ" class="required">
+                                <option value="">-Choose one-</option>
+                                <option value="noSauce">No sauce</option>
+                                <option value="mild">Mild</option>
+                                <option value="spicy">Spicy</option>
+                            </select>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td><input type="submit" id="submit_button" value="SUBMIT"></td>
+                            <td><input type="reset" value="RESET" onclick="window.location.reload();"></td>
+                          </tr>
+                        </table>
+                        </form>
+                        </td>
+                        </tr>
+                       </table>
+                   
+                </section>
+            </section>
+
+    
+        <footer>
+                <section class="footer_details">
+                    <div class="footer_text">
+                        <h6>Evgenii Shvetsov</h6>
+                        <p>Copyright 2021. All rights reserved</p>
+                    </div>
+                    <div class="social_media">
+                        <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/facebook.png" alt="fb"></a>
+                        <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/twitter.png" alt="twitter"></a>
+                        <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/linkedin.png" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/instagram.png" alt="instagram"></a>
+                    </div>
+                </section>
+        </footer>
+    </section>
+</body>
+</html>

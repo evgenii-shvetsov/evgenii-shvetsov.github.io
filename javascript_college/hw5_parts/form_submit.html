@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #5. Form submitted.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, JQuery">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #5. Form has been submitted</title>
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+   
+    
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+    <script>    
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+            });
+
+    </script>
+    
+        
+</head>
+
+<body>
+    <section class="container">
+        <header>
+            <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="../styles/images/logo.png" alt="ccsf logo"></a></div>
+            <div class="header_text"><h1>Homework 5. Form has been submitted</h1></div>
+        </header>
+  
+        <section class="main"> 
+            <nav>
+                <ol class="navigation">
+                    <li><a href="../index.html" class="myButton">Home & HW 1</a></li>
+                    <li><a href="../hw5.html" class="myButton">HW 5. Main</a></li>
+                    <li><a href="../hw5_parts/part_1.html" class="myButton">HW 5. Part 1</a></li>
+                    <li><a href="../hw5_parts/part_2.html" class="myButton">HW 5. Part 2</a></li>
+                    <li><a href="../hw5_parts/part_3.html" class="myButton">HW 5. Part 3</a></li>
+                </ol>
+            </nav>
+
+
+        <section class="form">
+            <h4>Your form has been submitted </h4> <br>
+
+                </script>     
+        </section>
+    </section>
+
+    
+
+    <footer>
+        <section class="footer_details">
+            <div class="footer_text">
+                <h6>Evgenii Shvetsov</h6>
+                <p>Copyright 2021. All rights reserved</p>
+            </div>
+            <div class="social_media">
+                <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/facebook.png" alt="fb"></a>
+                <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/twitter.png" alt="twitter"></a>
+                <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/linkedin.png" alt="linkedin"></a>
+                <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="../styles/images/socials/instagram.png" alt="instagram"></a>
+            </div>
+    </section>
+</footer>
+</section>
+</body>
+</html>

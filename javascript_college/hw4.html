@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #4. Main page o the homework  №4. Containts of 4 parts.">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #4</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script> 
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+            });
+    </script>
+</head>
+<body>
+    <section class="container">
+            
+            <header>
+                <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="styles/images/logo.png" alt="ccsf logo"></a></div>
+                <div class="header_text"><h1>CNIT 133 Homework 4 - Looping Statements</h1></div>
+            </header>
+            
+            <section class="main"> 
+                <nav>
+                    <ol class="navigation">
+                        <li><a href="./index.html" class="myButton">Home & HW 1</a></li>
+                        <li><a href="./hw4.html" class="myButton">HW 4. Main</a></li>
+                        <li><a href="./hw4_parts/part_1.html" class="myButton">HW 4. Part 1</a></li>
+                        <li><a href="./hw4_parts/part_2.html" class="myButton">HW 4. Part 2</a></li>
+                    </ol>
+                </nav>
+
+                <section class="description">
+                    <p>
+                        <a class="parts" href="./hw4_parts/part_1.html">Part 1</a>  <br>
+                        Part 1a: Create a webpage that contains a script, using the for statement, that calculates the product and sum of every fourth integer from 5 to 21 inclusive and then displays the results, along with some accompanying text. <br><br>
+
+                        (Note: You should print a line that contains the result of 5 * 9 * 13 * 17 * 21 and a second line that contains the result of 5 + 9 + 13 + 17 + 21). <br><br>
+                        
+                        Part 1b: On the same webpage as Part 1a, create a script, using the while or do while statement, that calculates the product and sum of every third integer from 3 to 21 inclusive an then displays the results, along with some accompanying text.<br><br>
+                        
+                        (Note: You should print a line that contains the result of 3 * 6 * 9 * 12 * 15 * 18 * 21 and a second line that contains the result of 3 + 6 + 9 + 12 + 15 + 18 + 21).<br><br>
+                        
+                        Use jQuery UI to allow the user to drag an element to a specific area of the page - can be any type of element. For more on jQuery UI draggable see the example in this page (Links to an external site.).<br><br><br><br>
+                    </p>
+                    <p>
+                        <a class="parts" href="./hw4_parts/part_2.html">Part 2</a>  <br>
+                        Create a webpage that contains a script that will calculate compound interest on a principal of $1000 for interest rates of 5, 6, and 7%, for years 1 through 10. The formula to use is : A = P(1 + r)n where <br><br>
+
+                        P is the principal (the initial amount you borrow or deposit) <br><br>
+
+                        r is the annual rate of interest (percentage)<br><br>
+
+                        n is the number of years the amount is deposited<br><br>
+
+                        A is the amount of money accumulated after n years, including interest<br><br>
+
+                        Output in table format the year followed by the total amount calculated for each of the interest rates of 5% - 7%. (Be sure to include decimals for the cents.) Your 3rd column should contain the corresponding interest rate. For example, the first 5 table rows should display as:<br><br>
+
+
+                        Year &nbsp;&nbsp;&nbsp;&nbsp;	Amount on deposit&nbsp;&nbsp;&nbsp;&nbsp;	Interest Rate<br><br>
+                        1 &nbsp;&nbsp;&nbsp;&nbsp;	1050.00 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	0.05<br><br>
+                        2 &nbsp;&nbsp;&nbsp;&nbsp;	1102.50	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    0.05<br><br>
+                        3 &nbsp;&nbsp;&nbsp;&nbsp;	1157.63 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	0.05<br><br>
+                        4 &nbsp;&nbsp;&nbsp;&nbsp;	1215.51 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	0.05<br><br>
+                        There is NO INPUT for this problem as well! The 3 tables (one for 5%, another for 6% and another for 7%) should be shown as soon as the page is opened (loaded in the browser). This problem can be resolved with one loop inside the other.<br><br>
+
+                        Use jQuery or you can use CSS to alternate the background colors of the rows of the table but notice that the first row should be maroon (dark red and the font should be white).<br><br>
+
+                        For more information on calculating compound interest, see this link (Links to an external site.). 
+                    </p>
+
+                </section>
+            </section>
+
+            <footer>
+                <section class="footer_details">
+                    <div class="footer_text">
+                        <h6>Evgenii Shvetsov</h6>
+                        <p>Copyright 2021. All rights reserved</p>
+                    </div>
+                    <div class="social_media">
+                        <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/facebook.png" alt="fb"></a>
+                        <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/twitter.png" alt="twitter"></a>
+                        <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/linkedin.png" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/instagram.png" alt="instagram"></a>
+                    </div>
+            </section>
+            </footer>
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 133, Homework #8. Main page o the homework  №8. Containts of 8 parts.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, AJAX, PHP">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #8</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://code.jquery.com/jquery-1.7.1.js"></script>
+    <script> 
+        $(document).ready(function() {
+            $("nav [href]").each(function(){
+                if (this.href == window.location.href) {
+                $(this).addClass("active_link");
+                    }
+                });
+            });
+    </script>
+    <style>
+        
+        
+        .answer a{
+            display: block;
+            text-decoration: underline;
+            color:rgb(47, 78, 253);
+            text-align: center;
+            font-weight: bold;
+        }
+        .description{
+            margin: 20 auto;
+        }
+
+        h2{
+            margin-top: 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+        h2:hover{
+            opacity: 0.5;
+        }
+     
+    </style>
+</head>
+<body>
+    <section class="container">
+            
+            <header>
+                <div class="ccsf_logo"><a href="https://www.ccsf.edu"><img id="ccsf_logo" src="styles/images/logo.png" alt="ccsf logo"></a></div>
+                <div class="header_text"><h1>CNIT 133 Homework 8 - AJAX Applications</h1></div>
+            </header>
+            
+            <section class="main"> 
+                <nav>
+                    <ol class="navigation">
+                        <li><a href="./index.html" class="myButton">Home & HW 1</a></li>
+                        <li><a href="./hw8.html" class="myButton">HW 8. Main</a></li>
+                        <li><a href="./hw8_parts/part_1.html" class="myButton">HW 8. Part 1</a></li>
+                    </ol>
+                </nav>
+
+                <section class="description">
+                    <h2>Part 1</h2>
+                        <p class="answer">
+                            <br>Recreate the 'gethint' Ajax example from W3Schools (Links to an external site.). Use the php file containing the hints and expand them to include several more names as hints (at least 10 more names). <br> <br>
+
+                            Do some research and include in that page a paragraph presenting a REST API that you could use in an application and the URL to the documentation of that API - it cannot be any Github API, neither BART as both of those two have been mentioned in the lecture! You can start your research here - https://apilist.fun/ (Links to an external site.) - your paragraph or table should contain at least the following information: What type of response file you get (JSON, XML, etc.)? Do you need any type of key to access and use the API? You need also to provide a link to any type of documentation that would help the developer use the API.<br><br>
+                            <a  href="./hw8_parts/part_1.html"> Go to Part 1</a> <br><br>
+                        </p>
+
+
+                </section>
+            </section>
+
+            <footer>
+                <section class="footer_details">
+                    <div class="footer_text">
+                        <h6>Evgenii Shvetsov</h6>
+                        <p>Copyright 2021. All rights reserved</p>
+                    </div>
+                    <div class="social_media">
+                        <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/facebook.png" alt="fb"></a>
+                        <a href="https://twitter.com/officialccsf" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/twitter.png" alt="twitter"></a>
+                        <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/linkedin.png" alt="linkedin"></a>
+                        <a href="https://www.instagram.com/officialccsf/" target="_blank"  rel="noopener noreferrer"><img src="./styles/images/socials/instagram.png" alt="instagram"></a>
+                    </div>
+            </section>
+            </footer>
+
+    </section>
+</body>
+</html>
