@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("document").ready(function()
+        {
+            
+            let allH2 = $('h2'); /*select all H2*/
+                //console.log(allH2.length)
+
+            let contentUl = $('<ul></ul>'); /*creating empty unordered list*/
+            let listOfCertificates = [];
+            for (let j = 0; j<=listOfCertificates; j++){
+                
+            }
+            (function addCertificateList(){
+                
+                for(let i = 0; i < allH2.length; i++)
+                    {
+                        listOfCertificates.push(allH2[i].innerHTML);
+                        
+                        contentUl.append('<li><a>'+ listOfCertificates[i] + '</a></li>');
+
+                    
+                        contentUl.find('a')
+                            .css({'color':'blue',
+                                "text-decoration" : "underline",
+                                "cursor": "pointer"})
+                            .attr('href', '#certificate#' + i);
+                            
+                    }
+                })();
+              
+           $('h1').after(contentUl);
+
+           
+        }
+        )
+    </script>
+</head>
+<body>
+    <div class="content">
+        <h1>Computer Networking and Information Technology</h1>
+
+        <h2 id="certificate#0">Beginning Web Development Certificate</h2>
+        
+            <h3>CNIT 131H</h3>
+                <p>Introduction to HTML &amp; CSS – a light introduction course to HTML and
+                    inline CSS that is completed in 6 weeks. This course cannot be used to substitute CNIT
+                    131 for AS Degree, only certificates. HTML, CSS and FTP will be learned.</p>
+                
+            <h3>CNIT 131</h3>
+                <p>Internet and Beginning HTML – this is a semester-long course and you will
+                        learn about browsers, wired and wireless network, network security, etc. This course is
+                        part of the core courses required for AS Degree in CNIT. </p>
+                
+            <h3>CNIT 132:</h3>
+                <p>Intermediate HTML &amp; CSS – this course contains intermediate techniques
+                    of HTML and CSS including principles of Responsive Web Design, CSS animation, etc. </p>
+        <hr/>
+        
+
+        <h2 id="certificate#1">Advanced Web Development Certificate</h2>
+        
+            <h3>CNIT 133</h3>
+                <p>JavaScript, jQuery, AXAX – this course starts with the basics of
+                JavaScript up to more advanced techniques and will introduce jQuery and AJAX.</p>
+                        
+            <h3>CNIT 134</h3>
+                <p>Server-Side Technologies: ASP.NET – The use of ASP.NET techniques to
+                create dynamic, server-side web pages. Using MS Visual Studio. </p>
+        <hr/>
+        
+
+        <h2 id="certificate#2">Optional for Web Development Certificate</h2>
+        
+            <h3>CNIT 129</h3>
+                <p>Web 2.0 Technologies – the study and use of different web 2.0 technologies
+                        and their integration within web pages. Students will develop blogs, social media pages,
+                        social bookmarking, maps, etc. </p>
+                    
+            <h3>CNIT 131A</h3>
+                <p>XML &amp; JSON – Introduction to XML, the use of XML to transfer data
+                    across different platforms; XSLT, CSS to style XML data. Introduction to JSON. </p>
+        <hr/>
+        
+
+        <h2 id="certificate#3">Other Certificates</h2>
+        
+            <h3>Cybersecurity</h3>
+                <p>For students interested in the network security area. </p>
+        
+            <h3>Advanced Cybersecurity</h3>
+                <p>This certificate includes more advanced topics in the area of network
+                    security. Students will be ready to take some well-known industry exams in the area of
+                    network security. </p>
+        
+            <h3>Computer Technical Support</h3>
+                <p>This certificate prepares students for the job positions of technical
+                    support and even with some basis of help desk or technical service management. </p>
+        
+            <h3>Wireless Networking</h3>
+                <p>Students will be able to plan, install, and maintain wireless networks
+                    applying some basic principles of network security. </p>
+        <hr/>
+    </div>
+</body>
+</html>
