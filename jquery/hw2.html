@@ -24,14 +24,7 @@
                     {
                         listOfCertificates.push(allH2[i].innerHTML);
                         
-                        contentUl.append('<li><a>'+ listOfCertificates[i] + '</a></li>');
-
-                    
-                        contentUl.find('a')
-                            .css({'color':'blue',
-                                "text-decoration" : "underline",
-                                "cursor": "pointer"})
-                            .attr('href', '#certificate#' + i);
+                        contentUl.append(`<li><a href= "#certificate#${i}"> ${listOfCertificates[i]} </a></li>`);
                             
                     }
                 })();
