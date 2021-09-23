@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--  
+    Evgenii Shvetsov
+    The page was created on February 22 2021
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CNIT 132, Final Project. This is the final project for the course CNIT 132. It will store information about the author of this website, assignments, link to the meetup report, and contacts page">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Google Analytics, SEO, Web Development, Coding">
+    <meta name="author" content="Evgenii Shvetsov">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Analytics</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="styles/images/favicon.ico">
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-51M3DT5PD4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-51M3DT5PD4');
+    </script>
+    <style>
+        .content{
+            max-width: 750px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="container">
+        
+        <header>
+            <a class="ccsf_logo" href="https://www.ccsf.edu" target="_blank" rel="noopener noreferrer"><img id="ccsf_logo" src="styles/images/logo.png" alt="City College of San Francisco logo as a link to CCSF website"></a>
+            <h1 class="header_text">Part 2. Analytics Report Analysis </h1>
+        </header>
+ 
+
+
+        <main>
+            <nav>
+                <ul class="menu">
+                    <li><a href="./homework1.html" class="myButton">Home</a></li>
+                    <li><a href="./assignments.html" class="myButton">Assignments</a></li>
+                    <li><a href="./meetup.html" class="myButton">MeetUp</a></li>
+                    <li><a href="./seo_strategies.html" class="myButton">SEO</a></li>
+                    <li><a href="./analytics_report.html" class="myButton">GA report</a></li>
+                    <li><a href="./contact.html" class="myButton">Contact</a></li>
+                </ul>
+            </nav>
+
+            <section class="content">
+                <h2 class="hide_extra">Mini Project</h2>
+                <article>
+                    <h2 class="hide_extra">About me</h2>
+                    <h2>Google Analytics report</h2> <br>
+                    <p>Today we are going to <a class="external_link" href="./styles/images/google_analytics_report.pdf" target="_blank" rel="noopener noreferrer"> analyze two Google Analytics reports</a> based on device category by “Continents” and the breakdown by “Operation System”. The date range for these reports is August 22, 2021 – September 21, 2021.</p><br> 
+                    <p>The total number of website visitors is 43 users. 60% of users used mobile devices to visit the site and 41% used computers. Most visitors who use mobile phones are located in America – 17 people. 18 people who accessed the site with computers are located in America as well. Speaking about Europe and Asia, none of the visitors used a desktop; 7 people from Europe and 3 people from Asia used mobile phones.</p> <br>
+                    <p>The other report shows the breakdown of users by “Operating system”. Based on the report, 3 most popular operating systems users used to visit the site are IOS, Macintosh, and Windows. Android and Linux users visited the site but left it without any interaction. In the report we can observe the following metrics: “Engaged Sessions”. In order to see the increase of these metrics, users have to do at least one of the following activities on the site: spend 10 or more seconds on the site, have 1 or more conversion events, or have 2 or more page views. “Engagement rate” is a number of “Engaged Sessions” divided by the total number of sessions. The bigger the “Engagement rate” the better, so in our case 71% is a good rate according to the industry standards. A good way to increase these metrics is to improve the content to grab readers’ attention, make better navigation and UX of a site, speed up pages, and optimize mobile versions.</p>
+                    
+                    
+                    <!--  
+                    <a href="styles/images/abc.png" download="GFG">
+                        <button type="button">Download Report</button>
+                        </a>-->
+                </article>
+            
+               
+            
+                
+            </section>
+        </main>
+
+
+        <footer>
+            <section class="footer_details">
+                <div class="footer_text">
+                        <h6>Evgenii Shvetsov</h6>
+                        <a href="mailto:eshuetso@mail.ccsf.edu">Email Me</a>
+                    </div>
+                <div class="social_media">
+                    <a href="https://www.facebook.com/citycollegeofsanfrancisco/" target="_blank" rel="noopener noreferrer"><img src="styles/images/socials/facebook.png" alt="facebook logo"></a>
+                    <a href="https://twitter.com/officialccsf" target="_blank" rel="noopener noreferrer"><img src="styles/images/socials/twitter.png" alt="twitter logo"></a>
+                    <a href="https://www.linkedin.com/school/city-college-of-san-francisco/" target="_blank" rel="noopener noreferrer"><img src="styles/images/socials/linkedin.png" alt="linkedin logo"></a>
+                    <a href="https://www.instagram.com/officialccsf/" target="_blank" rel="noopener noreferrer"><img src="styles/images/socials/instagram.png" alt="instagram logo"></a>
+                </div>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>
